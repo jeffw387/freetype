@@ -1637,10 +1637,10 @@ typedef ptrdiff_t  FT_PtrDist;
     if ( ft_setjmp( ras.jump_buffer ) == 0 )
     {
       if ( continued )
-        FT_Trace_Disable();
+        // FT_Trace_Disable();
       error = FT_Outline_Decompose( &ras.outline, &func_interface, &ras );
       if ( continued )
-        FT_Trace_Enable();
+        // FT_Trace_Enable();
 
       if ( !ras.invalid )
         gray_record_cell( RAS_VAR );
